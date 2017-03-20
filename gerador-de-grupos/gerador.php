@@ -6,13 +6,11 @@
 		"Bruna Rafaella      ||",
 		"Danilo Soares       ||",
 		"Davi Batista        ||",
-		"Débora Lays         ||",
 		"Edna de Andrade     ||",
 		"Eduardo Lonardi     ||",
 		"Emanuele Garcia     ||",
 		"Filipe Izidoro      ||",
 	 	"Gabryelle Larissa   ||",
-		"Guilherme Gomes     ||",
 		"Jeislania Oliveira  ||",
 		"Jhony Anderson      ||",
 		"Jose Ronaldo        ||",
@@ -22,18 +20,15 @@
 		"Lucas Henrique      ||",
 		"Luiz Carlos         ||",
 		"Maria de Fátima     ||",
-		"Maria Eduarda Alves ||",
 		"Maria Eduarda França||",
 		"Matheus Henrique    ||",
 		"Matheus Lucas       ||",
 		"Milena Lins         ||",
 		"Ponciana Andreia    ||",
-		"Reinan Pereira      ||",
 		"Rhaiza Oliveira     ||",
 		"Rhodolfo Antonio    ||",
 		"Rivaldo Silva       ||",
 		"Ruan Matheus        ||",
-		"Sergio Henrique     ||",
 		"Thiago Vinicius     ||",
 		"Vanessa Bandeira    ||",
 		"Vinicius de Souza   ||",
@@ -41,8 +36,10 @@
 		"Yago Nascimento     ||",
 		"Mariara Vitória     ||",
 		"Douglas de Oliveira ||",
+		"Nicolas Ramos       ||",
 		"Marcelo Adson       ||"
 	];
+
 	$arrayAlunos = array_map(function($el) {
 		return str_replace(" ", "&nbsp;", $el);
 	}, $arrayAlunos);
@@ -61,7 +58,7 @@
 <?php
 	$sorteados = [];
 
-	if(isset($_POST['submit'])){
+	if(isset($_POST['submit']) && !empty($_POST['tema'])){
 		
 		if(!empty($_POST['grupAlunos'])) {
 			
@@ -96,7 +93,7 @@
 					}
 
 				}	
-				echo "| Tema ".$temas[$j]."<br>";
+				echo " Tema ".$temas[$j]."<br>";
 				$cont++;
 				
 				}
